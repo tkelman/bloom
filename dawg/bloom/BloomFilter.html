@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/><!-- using block title in layout.dt--><!-- using block ddox.defs in ddox.layout.dt--><!-- using block ddox.title in ddox.layout.dt-->
+		<title>Struct BloomFilter</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav"><!-- using block navigation in layout.dt-->
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">dawg</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../dawg/bloom.html" class="selected module">bloom</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct BloomFilter</h1><!-- using block body in layout.dt--><!-- Default block ddox.description in ddox.layout.dt--><!-- Default block ddox.sections in ddox.layout.dt--><!-- using block ddox.members in ddox.layout.dt-->
+			<section>
+				<p> Basic bloom filter. This is a very fast data structure to <a href="../../dawg/bloom/BloomFilter.test.html"><code class="prettyprint lang-d">test</code></a> set membership
+ of a key.  It might give false positive results but never false negative
+ ones.  So if a key was inserted testing for the same key is guaranteed to be
+ true, but testing might also be true even though a key was never inserted.
+</p>
+<section>
+<p> Asymptotic false-positive rates for different BitsPerEntry settings.
+</p>
+
+<p> 1 - 63.2%
+ 2 - 39.3%
+ 3 - 23.7%
+ 4 - 14.7%
+ 5 - 9.18%
+ 6 - 5.61%
+ 7 - 3.47%
+ 8 - 2.15%
+ 9 - 1.33%
+</p>
+</section>
+
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dawg/bloom/BloomFilter.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>construct a bloom filter for <a href="../../dawg/bloom/BloomFilter.this.html#nentries"><code class="prettyprint lang-d">nentries</code></a>
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dawg/bloom/BloomFilter.clear.html" class="public">
+										<code>clear</code>
+									</a>
+								</td>
+								<td><code class="prettyprint lang-d">clear</code> all bits
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dawg/bloom/BloomFilter.insert.html" class="public">
+										<code>insert</code>
+									</a>
+								</td>
+								<td><code class="prettyprint lang-d">insert</code> a <a href="../../dawg/bloom/BloomFilter.insert.html#key"><code class="prettyprint lang-d">key</code></a>
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dawg/bloom/BloomFilter.reset.html" class="public">
+										<code>reset</code>
+									</a>
+								</td>
+								<td>free all bits
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dawg/bloom/BloomFilter.resize.html" class="public">
+										<code>resize</code>
+									</a>
+								</td>
+								<td><code class="prettyprint lang-d">resize</code> to <a href="../../dawg/bloom/BloomFilter.resize.html#nentries"><code class="prettyprint lang-d">nentries</code></a>, bits are cleared
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dawg/bloom/BloomFilter.size.html" class="public">
+										<code>size</code>
+									</a>
+								</td>
+								<td>return the number of entries
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../dawg/bloom/BloomFilter.test.html" class="public">
+										<code>test</code>
+									</a>
+								</td>
+								<td><code class="prettyprint lang-d">test</code> membership of <a href="../../dawg/bloom/BloomFilter.test.html#key"><code class="prettyprint lang-d">key</code></a>
+</td>
+							</tr>
+						</table>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="BitsPerEntry">BitsPerEntry</td><td> Set the number of bits allocated per entry.</td></tr>
+<tr><td id="CheapHash">CheapHash</td><td> Use a faster but less good hash function.</td></tr>
+</table>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2><!-- using block ddox.authors in ddox.layout.dt-->
+<p>Martin Nowak
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2><!-- using block ddox.copyright in ddox.layout.dt-->
+<p>Martin Nowak 2013 -.
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2><!-- using block ddox.license in ddox.layout.dt-->
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>
