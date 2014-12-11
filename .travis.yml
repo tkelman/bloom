@@ -1,10 +1,10 @@
 language: d
 
-#d:
-#  - dmd-2.065.0
-#  - dmd-2.066.1
-#  - gdc-4.9.0
-#  - ldc-0.14.0
+d:
+  - dmd-2.065.0
+  - dmd-2.066.1
+  - gdc-4.9.0
+  - ldc-0.14.0
 
 install: dub fetch doveralls
 
